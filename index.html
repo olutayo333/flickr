@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @media screen and (max-width: 446px )
+        {
+            body {overflow-y: auto; }
+            .btn{ font-weight: bold ; font-weight: normal; font-size: 10px; width: 50px;}
+            .col-9{display: none;}
+            .navbar .container-fluid .navbar-brand img{width: 1px;}
+            .navbar .container-fluid .d-flex .search_bar{display: none;}
+            .navbar .container-fluid .d-flex .btn_signup{display: none;}
+            .navbar .container-fluid .d-flex .btn_login {border:2px solid white; width: 100%;
+                                                          padding: 5px 15px 5px 15px; margin: 5px 0px 0px 5px;}
+            .carousel-inner .carousel-item .carousel-caption .mb-4 { font-size: 35px; margin-bottom: 0px;}
+            .carouselExampleFade  .carousel-inner .carousel-item .carousel-caption a.btn { width:5px;}
+            .carousel-item .carousel-caption  a.btn{ width: 45%; font-size: 16px; padding: 0px 0px 0px 0px; 
+                                                      margin: 0px 0px 0px 0px; border-radius: 0px;}
+
+            footer{display: none;}
+          
+           
+        }
+         
+        body{overflow-y: hidden; }
+        .btn { font-size: 22px; font-weight: bold; width: 200px; }
+        .btn:hover{color:darkgray; background-color: white; }
+        .mb-4{font-size:50px;}
+        .bottom_link{color: white; text-decoration: none; font-size: 13px;}
+        .bottom_link:hover{text-decoration: underline;}  
+        
+        .my_own_nav_css
+        {position:absolute; width:100%; z-index:999; background:rgba(0, 0, 0, 0.256) !important; border:none; border-radius:0;}
+        .navbar .container-fluid .navbar-brand img{width: 50%;}
+
+        .d-flex .btn_login {width:80%; height:10%; color:white; font-weight:light; font-size:15px; background:none;
+                             border:0; text-decoration: none; }
+     .navbar .container-fluid .d-flex .btn_signup {width:150px; height:50%; font-weight:light; font-size:15px; 
+                                                    background-color:white; color:black; border-radius:3px; border:0; 
+                                                    padding: 5px 5px 5px 20px; text-decoration: none;}
+        .btn_signup:hover{color:darkgray;}
+        
+        .search_bar{width:65vw; background:rgb(200,202,207); opacity:0.6; border-radius:2px; margin-right:50px; transition: 0.5s ease-in-out; }
+        input[type=search]:focus{background-color: #fff !important; opacity: 0.9; border:none;}
+                          /*:focus-visible :focus-within*/
+        footer{z-index:1; bottom:0; left:0; position:fixed;  width:100%; background-color:black; text-align:center; 
+                height:6vh; line-height: 6vh;
+                }
+        footer a { text-decoration: none; color: #808080;  padding:0px 0px 0px 30px; } 
+        footer a:hover{color: #fff; }
+   
+   </style>
+
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary my_own_nav_css">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                     <img src="img/flickr_logo_dots.7670d27a.svg" >
+                </a>  
+                <form class="d-flex" role="search">  
+                    <input class="search_bar form-control me-2  " type="search" placeholder="photos,people, or groups" aria-label="Search">
+                </form> 
+                <form class="d-flex me-3">                       
+                   <a href="login.html" target="_self" class="btn_login  me-0">Log ln </a>
+                  <a href="signup.html" target="_parent" class="btn_signup me-1"> Sign Up </a>
+                </form>
+            </div>
+          </nav>  
+          
+          
+
+          <div id="carouselExampleFade" class="carousel slide carousel-fade my_own_carousel_css" data-bs-ride="carousel" >
+        
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active align-items-center"> 
+                <img src="img/A_Time_of_Change_Rachel_Brokaw.jpeg" class="d-block w-100 align-items-center vh-100" alt="...">        
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                        <h1 class="mb-4" >Find your inspiration.</h1>
+                        <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                        <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                    </div>
+                    <div class="carousel-caption d-flex flex-column">
+                      <a href="" class="bottom_link"> <b>A Time of Change </b> </a>
+                      <a href="" class="bottom_link"> <p><b>by Racheal Browkaw </b></p> </a>
+                    </div>
+            </div>
+           
+            <div class="carousel-item" > 
+                <img src="img/benito_druck.jpeg" class="d-block w-100 vh-100" alt="...">
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                         <h1 class="mb-4">Find your inspiration.</h1>
+                        <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                        <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                    </div> 
+                    <div class="carousel-caption d-flex flex-column">
+                      <a href="" class="bottom_link"> <b>Fantasy Island</b> </a>
+                      <a href="" class="bottom_link"> <p><b> by Daniel Cheong </b></p> </a>
+                    </div>      
+              </div>
+
+           <div class="carousel-item">
+            <img src="img/Catwalk_am_Bahnhof_Zurich_Oerlikon_Peter_Arn.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center " style="top: 0;">
+                    <h1 class="mb-4">Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b> Mists of Renfrew</b> </a>
+                  <a href="" class="bottom_link"> <p><b>by Adam Gibbs</b></p> </a>
+                </div>
+          </div>
+
+           <div class="carousel-item">
+            <img src="img/Cool_Power_commended-LPOTY_UK_Steve_Cole.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center " style="top: 0;">
+                    <h1 class="mb-4" >Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b>Happy Birthday Adam! </b> </a>
+                  <a href="" class="bottom_link"> <p><b>by Iwona Podlasinska </b></p> </a>
+                </div> 
+          </div>
+
+          <div class="carousel-item"> 
+            
+            <img src="img/Dawn_of_Another_Day_Sky_Matthews.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                    <h1 class="mb-4" style="font-size: 50px;">Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                    <a href="" class="bottom_link"> <b>Happy Birthday Adam! </b> </a>
+                    <a href="" class="bottom_link"> <p><b>by Iwona Podlasinska </b></p> </a>
+                </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/Europes_best_View_Fabian_Fortmann.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                    <h1 class="mb-4" >Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b>Desert Beauty </b> </a>
+                  <a href="" class="bottom_link"> <p><b> by Christoph Fischer</b></p> </a>
+                </div> 
+               
+          </div> 
+
+          <div class="carousel-item">
+            <img src="img/Happy_Birthday_Adam_Iwona_Podlasinska.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center " style="top: 0;">
+                    <h1 class="mb-4">Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b> Desert Beauty </b> </a>
+                  <a href="" class="bottom_link"> <p><b> by Christoph Fischer </b></p> </a>
+                </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/If_Only_We_Could_Turn_Back_Time_Anna_Kwa.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                    <h1 class="mb-4">Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b> If Only We Could Turn Back Time </b> </a>
+                  <a href="" class="bottom_link"> <p><b>by Anna Kwa </b></p> </a>
+                </div> 
+            </div>
+                
+
+                <div class="carousel-item">
+                    <img src="img/Mists_of_renfrew_Adam_Gibbs.jpeg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                            <h1 class="mb-4" >Find your inspiration.</h1>
+                            <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                            <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                        </div>
+                        <div class="carousel-caption d-flex flex-column">
+                          <a href="" class="bottom_link"> <b>Fantasy Island </b> </a>
+                          <a href="" class="bottom_link"> <p><b>by Daniel Cheong </b></p> </a>
+                        </div>   
+                </div>   
+
+                <div class="carousel-item">
+                    <img src="img/Secluded_Pete_Rowbottom.jpeg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100  align-items-center" style="top: 0;">
+                            <h1 class="mb-4">Find your inspiration.</h1>
+                            <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                            <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                        </div>
+                        <div class="carousel-caption d-flex flex-column">
+                          <a href="" class="bottom_link"> <b>Tree and Morning Mist</b> </a>
+                          <a href="" class="bottom_link"> <p><b>by Jos Buurmans </b></p> </a> 
+                        </div>
+                  </div>
+        
+
+                  <div class="carousel-item">
+                    <img src="img/Sheep_in_the_woods_II_James_Mills.jpeg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                            <h1 class="mb-4">Find your inspiration.</h1>
+                            <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                            <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                        </div>
+                        <div class="carousel-caption d-flex flex-column">
+                          <a href="" class="bottom_link"> <b>Cool Power commended-LPOTY </b> </a>
+                          <a href="" class="bottom_link"> <p><b>by Steve Cole </b></p> </a>
+                        </div>     
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="img/sunset_1663_Junji_Aoyama.jpeg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                            <h1 class="mb-4">Find your inspiration.</h1>
+                            <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                            <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                        </div>
+                        <div class="carousel-caption d-flex flex-column">
+                          <a href="" class="bottom_link"> <b>Fantasy Island</b> </a>
+                          <a href="" class="bottom_link"> <p><b> by Daniel Cheong</b></p> </a> 
+                         
+                        </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="img/Tree_and_Morning_Mist_Jos_Buurmans.jpeg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                            <h1 class="mb-4">Find your inspiration.</h1>
+                            <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                            <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                        </div>
+                        <div class="carousel-caption d-flex flex-column">
+                          <a href="" class="bottom_link"> <b>Albuquerque, New Mexico</b> </a>
+                          <a href="" class="bottom_link"> <p><b>by Jorge Guadalupe Lizárraga </b></p> </a>
+                        </div>
+                  </div> 
+
+          <div class="carousel-item">
+            <img src="img/sunset_1663_Junji_Aoyama.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                    <h1 class="mb-4" style="font-size: 50px;">Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/Untitled_Jorge_Guadalupe_Lizarraga.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                    <h1 class="mb-4" >Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b>Frosch, Bokeh 2 </b> </a>
+                  <a href="" class="bottom_link"> <p><b>by axelfw </b></p> </a>
+                </div>
+          </div>
+          </div> 
+
+          <div class="carousel-item">
+            <img src="img/15118079089_489aa62638_b.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center" style="top: 0;">
+                    <h1 class="mb-4">Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b>If Only We Could Turn Back Time </b> </a>
+                  <a href="" class="bottom_link"> <p><b>by Racheal Krokov </b></p> </a>
+                </div>
+          </div>
+
+          
+          <div class="carousel-item">
+            <img src="img/Desert_Beauty_Christoph_Fischer.jpeg" class="d-block w-100 vh-100" alt="...">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 align-items-center " style="top: 0;">
+                    <h1 class="mb-4" >Find your inspiration.</h1>
+                    <div class="col-9 mx-auto"> <p> <h3>Join the Flickr community, home to tens of billions of photos and 2 million groups. </h3> </p> </div>
+                    <a href="signup.html" target="_parent" class="btn btn-light btn-lg mx-auto py-3 my-4"> Start for free </a>
+                </div>
+                <div class="carousel-caption d-flex flex-column">
+                  <a href="" class="bottom_link"> <b>If Only We Could Turn Back Time </b> </a>
+                  <a href="" class="bottom_link"> <p><b>by Anna Kwa </b></p> </a>
+                </div>  
+          </div>
+         
+
+        </div>
+        
+        
+      </div>
+      
+      <footer class=" container-fluid">
+        
+        <a href="">About</a> <a href="">Jobs</a> <a href="">Blogs</a> <a href="">Developers </a> <a href="">Guidelines</a>
+        <a href="">Help</a> <a href="">Help Forum</a> <a href="">Privacy</a> <a href="">Terms</a> <a href="">Cookies</a> 
+        <a href="">English</a> <a href="">SmugMug+Flickr.</a> 
+        <a href=""><img src=""> </a>
+        
+      </footer>
+
+      </div>
+
+   
+
+
+
+    <script href="bootstrap-5.3.2-dist/js/bootstrap.js" rel="java"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+</body>
+</html>
